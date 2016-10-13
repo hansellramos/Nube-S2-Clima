@@ -19,7 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVc-AT-Wra"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVc-AT-Wra">
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Rge-39-Mi2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LFR-jC-1df"/>
+                                </connections>
+                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciudad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmP-sz-Odt">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -42,6 +47,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="4Xa-Oi-7ET" secondAttribute="trailing" id="h4U-gN-UZK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblCiudad" destination="TmP-sz-Odt" id="LKp-2G-wex"/>
+                        <outlet property="lblTemperatura" destination="4Xa-Oi-7ET" id="P4j-Se-7nZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
